@@ -1,26 +1,55 @@
 .jobs-page {
-    margin: 20px auto;
-    max-width: 800px;
-    text-align: left;
-  }
-  
-  .job-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  .job-table th, .job-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-  }
-  
-  .job-table th {
-    background-color: #f4f4f4;
-    text-align: left;
-  }
-  
-  .job-table tr:hover {
-    background-color: #f1f1f1;
-  }
-  
+  padding: 20px;
+}
+
+h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.job-table-container {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.job-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.job-table th,
+.job-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+}
+
+.job-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.job-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.job-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.job-table button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.job-table button:hover {
+  background-color: #218838;
+}

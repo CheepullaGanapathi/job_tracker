@@ -1,49 +1,38 @@
 .job-seeker-page {
-    margin: 20px auto;
-    max-width: 800px;
-    text-align: left;
-  }
-  
-  .application-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 20px;
-  }
-  
-  .application-form input, .application-form button {
-    padding: 10px;
-    font-size: 16px;
-  }
-  
-  .application-form button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .application-form button:hover {
-    background-color: #45a049;
-  }
-  
-  .application-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  .application-table th, .application-table td {
-    border: 1px solid #ddd;
-    padding: 10px;
-  }
-  
-  .application-table th {
-    background-color: #f4f4f4;
-    text-align: left;
-  }
-  
-  .application-table tr:hover {
-    background-color: #f1f1f1;
-  }
-  
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.application-form input,
+.application-form button {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.application-form input[type="file"] {
+  padding: 0;
+}
+
+.application-form button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.application-form button:hover {
+  background-color: #0056b3;
+}

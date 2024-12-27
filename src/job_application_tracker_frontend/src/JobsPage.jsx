@@ -18,30 +18,38 @@ const JobsPage = () => {
   return (
     <div className="jobs-page">
       <h2>Available Jobs</h2>
-      <table className="job-table">
-        <thead>
-          <tr>
-            <th>Company</th>
-            <th>Role</th>
-            <th>Salary</th>
-            <th>Experience</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {jobs.map((job) => (
-            <tr key={job.id}>
-              <td>{job.company}</td>
-              <td>{job.role}</td>
-              <td>{job.salary}</td>
-              <td>{job.experience}</td>
-              <td>
-                <button onClick={() => handleApply(job.id)}>Apply</button>
-              </td>
+      <div className="job-table-container">
+        <table className="job-table">
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th>Role</th>
+              <th>Salary</th>
+              <th>Experience</th>
+              <th>Action</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            {jobs.length > 0 ? (
+              jobs.map((job) => (
+                <tr key={job.id}>
+                  <td>{job.company}</td>
+                  <td>{job.role}</td>
+                  <td>{job.salary}</td>
+                  <td>{job.experience}</td>
+                  <td>
+                    <button onClick={() => handleApply(job.id)}>Apply</button>
+                  </td>
+                </tr>
+              ))
+            ) : (
+              <tr>
+                <td colSpan="5">No jobs available. Please check back later.</td>
+              </tr>
+            )}
+          </tbody>
+        </table>
+      </div>
     </div>
   );
 };

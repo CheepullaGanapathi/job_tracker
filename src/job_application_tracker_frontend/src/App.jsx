@@ -9,7 +9,7 @@ const App = () => {
   return (
     <Router>
       <div className="app-container">
-        <h1>Job Recruitment Platform</h1>
+        <h1>Job  Application  Tracker</h1>
         <nav>
           <ul className="nav-links">
             <li>
