@@ -1,0 +1,26 @@
+{
+  "canisters": {
+    "job_application_tracker_backend": {
+      "main": "src/job_application_tracker_backend/main.mo",
+      "type": "motoko"
+    },
+    "job_application_tracker_frontend": {
+      "dependencies": [
+        "job_application_tracker_backend"
+      ],
+      "source": [
+        "src/job_application_tracker_frontend/dist"
+      ],
+      "type": "assets",
+      "workspace": "job_application_tracker_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
