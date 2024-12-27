@@ -1,31 +1,33 @@
-import { useState } from 'react';
-import { job_application_tracker_backend } from 'declarations/job_application_tracker_backend';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import CompanyPage from "./CompanyPage";
+import JobSeekerPage from "./JobSeekerPage";
+import JobsPage from "./JobsPage";
+import "./App.css";
 
-function App() {
-  const [greeting, setGreeting] = useState('');
-
-  function handleSubmit(event) {
-    event.preventDefault();
-    const name = event.target.elements.name.value;
-    job_application_tracker_backend.greet(name).then((greeting) => {
-      setGreeting(greeting);
-    });
-    return false;
-  }
-
+const App = () => {
   return (
-    <main>
-      <img src="/logo2.svg" alt="DFINITY logo" />
-      <br />
-      <br />
-      <form action="#" onSubmit={handleSubmit}>
-        <label htmlFor="name">Enter your name: &nbsp;</label>
-        <input id="name" alt="Name" type="text" />
-        <button type="submit">Click Me!</button>
-      </form>
-      <section id="greeting">{greeting}</section>
-    </main>
+    <Router>
+      <div className="app-container">
+        <h1>Job Recruitment Platform</h1>
+        <nav>
+          <ul className="nav-links">
+            <li>
+              <Link to="/company">Post a Job (Company)</Link>
+            </li>
+            <li>
+              <Link to="/jobs">View Jobs</Link>
+            </li>
+          </ul>
+        </nav>
+        <Routes>
+          <Route path="/company" element={<CompanyPage />} />
+          <Route path="/jobs" element={<JobsPage />} />
+          <Route path="/apply/:jobId" element={<JobSeekerPage />} />
+        </Routes>
+      </div>
+    </Router>
   );
-}
+};
 
 export default App;

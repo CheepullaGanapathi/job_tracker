@@ -1,0 +1,49 @@
+.job-seeker-page {
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: left;
+  }
+  
+  .application-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  
+  .application-form input, .application-form button {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .application-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .application-form button:hover {
+    background-color: #45a049;
+  }
+  
+  .application-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .application-table th, .application-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .application-table th {
+    background-color: #f4f4f4;
+    text-align: left;
+  }
+  
+  .application-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  

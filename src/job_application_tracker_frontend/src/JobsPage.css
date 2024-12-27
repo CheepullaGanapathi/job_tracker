@@ -1,0 +1,26 @@
+.jobs-page {
+    margin: 20px auto;
+    max-width: 800px;
+    text-align: left;
+  }
+  
+  .job-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .job-table th, .job-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .job-table th {
+    background-color: #f4f4f4;
+    text-align: left;
+  }
+  
+  .job-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
